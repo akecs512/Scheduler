@@ -1,5 +1,5 @@
 
-$("#currentDay").html(dayjs().format("dddd MM/DD/YYYY hh:mm a"))
+$("#currentDay").html(dayjs().format("dddd MM/DD/YYYY HH:mm a"))
 var currentHour = dayjs().hour()
 var startHour = 9
 var endHour = 23
@@ -7,7 +7,6 @@ var timeArray = []
 
 $(document).on("click", ".saveBtn", function (event) {
   let timeBlockId = event.currentTarget.parentElement.id;
-  console.log(timeBlockId)
   localStorage.setItem(timeBlockId, $(this).siblings('textarea').val())
 }
 );
